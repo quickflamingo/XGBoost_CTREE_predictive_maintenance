@@ -160,7 +160,7 @@ and evaluate the models, respectively. For XGBoost, the Machine Type
 feature has to be hot encoded. No transformation or scaling is applied
 to the data.
 
-Figure @ref(fig:ctree1) shows a visualization of the built Conditional
+Figure 1 shows a visualization of the built Conditional
 Inference Tree. By inspecting the tree, it can noticed that it has a
 relatively large depth, and each feature in our dataset is used to split
 on. As mentioned earlier, *α* can be specified to control for the
@@ -186,8 +186,8 @@ Figure 1: Conditional Inference Tree with *α* = 0.44.
 </div>
 
 The confusion matrix for the predictions made on the test set with the
-Ctree model is shown in Figure @ref(fig:cmctree), and the evaluation
-metrics[2] in Table @ref(tab:evalctree). The model has an F1-score of
+Ctree model is shown in Figure 2, and the evaluation
+metrics[2] in Table 1. The model has an F1-score of
 72.1%. The Precision of the model is 79.2%, which means that out of all
 predicted machine malfunctions, the model can correctly classify the
 majority. However, the model only achieves a Recall of 66.1%, which
@@ -267,7 +267,7 @@ The XGBoost model is built using a maximum of 5000 trees, 5-fold cross
 validation, and AUPRC as evaluation metric for the validation data to
 select to optimum number of trees. A few hyperparameters are tuned using
 a grid search to increase the model’s performance, the description,
-search space, and optimal values are shown in Table @ref(tab:hyper). The
+search space, and optimal values are shown in Table 2. The
 imbalance parameter *s* is set to the sum of negative instances divided
 by the sum of positive instances in the training data. Moreover, to
 reduce computational time, a subsample of 70% of the training data is
@@ -307,7 +307,7 @@ nrounds
 Number of trees
 </td>
 <td style="text-align:left;">
-\[1, 5000\]
+[1, 5000]
 </td>
 <td style="text-align:left;">
 258
@@ -373,8 +373,8 @@ Minimum loss reduction
 </table>
 
 The confusion matrix for the predictions made on the test set with the
-XGBoost model is shown in Figure @ref(fig:cmxgb), and the evaluation
-metrics[3] in Table @ref(tab:evalxgb). The model has an F1-score of
+XGBoost model is shown in Figure 3, and the evaluation
+metrics[3] in Table 3. The model has an F1-score of
 74.7%. The Precision of the model is 68.8%, which is lower than the
 Ctree model. However, the model achieves a Recall of 81.8%, which is
 greater than the Ctree model. The evaluated metrics suggests that the
@@ -445,7 +445,7 @@ AUPRC
 </tbody>
 </table>
 
-Figure @ref(fig:impxgb) shows a feature importance plot of the built
+Figure 4 shows a feature importance plot of the built
 XGBoost ensemble model, the features are clustered based on their
 importance. The relative importance for each feature is calculated by
 the total “Gain” score, which is computed by the greedy algorithm at
@@ -468,7 +468,7 @@ Figure 4: Feature importance XGBoost.
 
 The most important variables can be plotted in a Partial Dependence Plot
 (PDP) to show the marginal effect the features have on the predicted
-probability of machine malfunction. Figure @ref(fig:pdpxgbtorque) shows
+probability of machine malfunction. Figure 5 shows
 the PDP for the Torque feature. The predicted probability of machine
 malfunction is the greatest for lower and higher Nm values.
 
@@ -481,7 +481,7 @@ Figure 5: Partial Dependence Plot Torque, XGBoost.
 
 </div>
 
-Figure @ref(fig:pdpxgbrot) shows the PDP for the Rotational Speed
+Figure 6 shows the PDP for the Rotational Speed
 feature. An increased predicted probability of machine malfunction can
 be noticed for lower RPMs.
 
@@ -494,7 +494,7 @@ Figure 6: Partial Dependence Plot Rotational Speed, XGBoost.
 
 </div>
 
-Figure @ref(fig:pdpxgbtoolwear) shows the PDP for the Tool Wear feature.
+Figure 7 shows the PDP for the Tool Wear feature.
 A high predicted probability of machine malfunction can be noticed
 higher operating minutes.
 
