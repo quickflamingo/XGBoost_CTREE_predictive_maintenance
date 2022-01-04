@@ -149,8 +149,8 @@ where *γ* is the minimum loss reduction needed for a node to split, and
 simpler trees and is by default set to 0. Also, L1 and L2 regularization
 can be used to reduce overfitting, *λ* is by default set to 1.
 
-After solving equations @ref(eq:eq2), @ref(eq:eq3), @ref(eq:eq4) and
-@ref(eq:eq5), the optimal weight *w*<sub>*j*</sub><sup>\*</sup> for each
+After solving equations 2, 3, 4 and
+5, the optimal weight *w*<sub>*j*</sub><sup>\*</sup> for each
 leaf *j* can be calculated. Using the optimal weight, the optimal value
 for a tree structure can then be calculated. Subsequently, by evaluating
 the optimal value, the best tree structure can be selected. As it is
