@@ -72,6 +72,12 @@ selected variable. This process iterates until the global null
 hypothesis can not be rejected anymore at a specified level of *α*, the
 global null hypothesis *H*<sub>0</sub> is defined as:
 
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/ctreehyp.gif" alt="eq1"  />
+
+</div>
+
 where *j* = 1,…, *m*, *m* = 6, *Y* is the response variable machine
 malfunction, *X*<sub>*j*</sub> are the features,
 *D*(*Y*∣*X*<sub>*j*</sub>) is the distribution of *X*<sub>*j*</sub>
