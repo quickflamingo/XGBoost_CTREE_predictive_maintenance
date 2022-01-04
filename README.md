@@ -180,7 +180,7 @@ Torque, Tool Wear, Rotational speed, and Air Temperature, respectively.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/ctree1-1.png" alt="Conditional Inference Tree with $\alpha$ = 0.44."  />
 <p class="caption">
-Conditional Inference Tree with *α* = 0.44.
+Figure 1: Conditional Inference Tree with *α* = 0.44.
 </p>
 
 </div>
@@ -214,14 +214,14 @@ of tool wear in minutes is not a great indicator.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/cmctree-1.png" alt="Confusion matrix for the Conditional Inference Tree."  />
 <p class="caption">
-Confusion matrix for the Conditional Inference Tree.
+Figure 2: Confusion matrix for the Conditional Inference Tree.
 </p>
 
 </div>
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-Evaluation metrics for the Conditional Inference Tree.
+Table 1 :Evaluation metrics for the Conditional Inference Tree.
 </caption>
 <thead>
 <tr>
@@ -278,6 +278,100 @@ trees, the algorithm will stop building. The resulting model has 258
 trees, a learning rate of 0.05, maximum depth of 12, *λ* of 8, and *γ*
 of 2.
 
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 2: Tuned hyperparameters for XGBoost.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Hyperparameter
+</th>
+<th style="text-align:left;">
+Description
+</th>
+<th style="text-align:left;">
+Search Space
+</th>
+<th style="text-align:left;">
+Optimal Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+nrounds
+</td>
+<td style="text-align:left;">
+Number of trees
+</td>
+<td style="text-align:left;">
+\[1, 5000\]
+</td>
+<td style="text-align:left;">
+258
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+eta
+</td>
+<td style="text-align:left;">
+Learning rate
+</td>
+<td style="text-align:left;">
+{.01, .05, .1, .2, .3}
+</td>
+<td style="text-align:left;">
+.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+max_depth
+</td>
+<td style="text-align:left;">
+Maximum depth of a tree
+</td>
+<td style="text-align:left;">
+{3, 6, 9, 12}
+</td>
+<td style="text-align:left;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+lambda
+</td>
+<td style="text-align:left;">
+L2 regularization term
+</td>
+<td style="text-align:left;">
+{1, 2, 5, 8 ,10}
+</td>
+<td style="text-align:left;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+gamma
+</td>
+<td style="text-align:left;">
+Minimum loss reduction
+</td>
+<td style="text-align:left;">
+{0, .5, 1, 2, 3 }
+</td>
+<td style="text-align:left;">
+2
+</td>
+</tr>
+</tbody>
+</table>
+
 The confusion matrix for the predictions made on the test set with the
 XGBoost model is shown in Figure @ref(fig:cmxgb), and the evaluation
 metrics[3] in Table @ref(tab:evalxgb). The model has an F1-score of
@@ -302,14 +396,14 @@ correctly.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/cmxgb-1.png" alt="Confusion matrix for the XGBoost ensemble model."  />
 <p class="caption">
-Confusion matrix for the XGBoost ensemble model.
+Figure 3: Confusion matrix for the XGBoost ensemble model.
 </p>
 
 </div>
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-Evaluation metrics for the XGBoost ensemble model.
+Table 3: Evaluation metrics for the XGBoost ensemble model.
 </caption>
 <thead>
 <tr>
@@ -367,7 +461,7 @@ Ctree model.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/impxgb-1.png" alt="Feature importance XGBoost."  />
 <p class="caption">
-Feature importance XGBoost.
+Figure 4: Feature importance XGBoost.
 </p>
 
 </div>
@@ -382,7 +476,7 @@ malfunction is the greatest for lower and higher Nm values.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/pdpxgbtorque-1.png" alt="Partial Dependence Plot Torque, XGBoost."  />
 <p class="caption">
-Partial Dependence Plot Torque, XGBoost.
+Figure 5: Partial Dependence Plot Torque, XGBoost.
 </p>
 
 </div>
@@ -395,7 +489,7 @@ be noticed for lower RPMs.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/pdpxgbrot-1.png" alt="Partial Dependence Plot Rotational Speed, XGBoost."  />
 <p class="caption">
-Partial Dependence Plot Rotational Speed, XGBoost.
+Figure 6: Partial Dependence Plot Rotational Speed, XGBoost.
 </p>
 
 </div>
@@ -408,7 +502,7 @@ higher operating minutes.
 
 <img src="finalpaperrmd---kopie_files/figure-markdown_github/pdpxgbtoolwear-1.png" alt="Partial Dependence Plot Tool Wear, XGBoost."  />
 <p class="caption">
-Partial Dependence Plot Tool Wear, XGBoost.
+Figure 7: Partial Dependence Plot Tool Wear, XGBoost.
 </p>
 
 </div>
