@@ -7,7 +7,7 @@ library(ggplot2)
 library(partykit)
 library(precrec)
 
-data<-read.csv("C:/Users/louis/OneDrive - Erasmus University Rotterdam/!Seminar Data science/finalpaper/maintenance.csv")
+data<-read.csv("~/maintenance.csv")
 
 data<-data[,c(-1,-2)]                                   # remove column 1 and 2
 data$Type<-as.factor(data$Type)                         # change to factor
