@@ -1,4 +1,4 @@
-## Predictive Maintenance: Conditional Inference Tree and XGBoost
+# Predictive Maintenance: Conditional Inference Tree and XGBoost
 
 # 1 Introduction
 
