@@ -98,6 +98,12 @@ Instead of building a single tree, XGBoost builds consecutive trees
 based on a previous created tree. XGBoost uses *K* additive trees to
 predict the output for each instance:
 
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/xgbnot1.gif" alt="eq2"  />
+
+</div>
+
 where *ŷ* is the predicted probability of machine malfunction, *x* are
 the feature values, *f*<sub>*k*</sub> is an independent tree, *F*
 indicates the space of all trees, *i* = 1,…, *n*, and *k* = 1,…, *K*.
@@ -107,10 +113,22 @@ summing up the scores in the corresponding leaves. To learn the set of
 independent trees, the following regularized objective is minimized
 using a gradient descent algorithm:
 
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/xgbnot2.gif" alt="eq3"  />
+
+</div>
+
 where the first term *l* is a loss function which measures the error
 between the predicted state of the machine and the actual state of the
 machine. As we are dealing with a binary classification and a highly
 imbalanced dataset, the weighted cross-entropy is used as loss function:
+
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/xgbnot3.gif" alt="eq4"  />
+
+</div>
 
 where *s* denotes the imbalance parameter. In the case of imbalanced
 data, a typical value to consider for *s* is the sum of negative
@@ -119,6 +137,12 @@ is set to larger than 1, extra loss will be counted on classifying that
 the machine is working, while in fact the machine has malfunctioned. The
 second term *Ω* in equation 2 penalizes the model complexity to deal
 with overfitting:
+
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/xgbnot4.gif" alt="eq5"  />
+
+</div>
 
 where *γ* is the minimum loss reduction needed for a node to split, and
 *T* the amount of leaves in the tree. Higher values of *γ* will lead to
@@ -147,6 +171,24 @@ After creating the confusion matrices, accuracy measures can then be
 calculated for each matrix. As our models are trained on heavily
 imbalanced data, the Precision, Recall, and F1 scores are used for
 evaluating the models and are determined as follows:
+
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/precision.gif" alt="eq6"  />
+
+</div>
+
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/recall.gif" alt="eq7"  />
+
+</div>
+
+<div class="figure" style="text-align: center">
+
+<img src="finalpaperrmd---kopie_files/figure-markdown_github/f1.gif" alt="eq8"  />
+
+</div>
 
 Precision is the proportion of the actual positive classifications among
 the total predicted positive classifications, Recall is the proportion
